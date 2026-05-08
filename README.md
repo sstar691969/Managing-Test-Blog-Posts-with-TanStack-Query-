@@ -1,149 +1,50 @@
-# Managing-Test-Blog-Posts-with-TanStack-Query-
-AD312-Managing Test Blog Posts with TanStack Query 
+# Welcome to your Expo app 👋
 
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-William Anderson
-AD312
+## Get started
 
-# 📱 CRUD Query App (Expo + TanStack Query)
+1. Install dependencies
 
-A React Native (Expo) application that demonstrates full CRUD operations using **TanStack Query** and the JSONPlaceholder API.  
-The project focuses on server-state management, API integration, filtering, and edge case handling.
+   ```bash
+   npm install
+   ```
 
----
+2. Start the app
 
-# 🚀 Features
+   ```bash
+   npx expo start
+   ```
 
-## ✅ CRUD Operations
-- Create posts (POST)
-- Read posts (GET)
-- Update posts (PUT)
-- Patch posts (PATCH)
-- Delete posts (DELETE)
+In the output, you'll find options to open the app in a
 
-## 🔍 Filtering
-- Filter posts by User ID
-- Dynamic API requests using TanStack Query
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-## ⚡ State Management
-- @tanstack/react-query for server state
-- Automatic caching and refetching
-- Query invalidation after mutations
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
----
+## Get a fresh project
 
-# 🛠️ Tech Stack
-
-- React Native (Expo)
-- TanStack Query
-- JavaScript (ES6+)
-- Fetch API
-- JSONPlaceholder API
-
-# 🧪 Test Cases & Edge Cases
-
-This section demonstrates that the application was tested with both normal and edge scenarios to ensure correct functionality and stability.
-
----
-
-# 🟢 Normal Test Cases
-
-## Test Case 1 — Fetch Posts (READ)
-**Description:** Load all posts from API when app opens.
-
-**Steps:**
-- Open the application
-
-**Expected Result:**
-- A list of posts is displayed in a FlatList
-- No errors in console
-
----
-
-## Test Case 2 — Create Post (POST)
-**Description:** Add a new post using input fields.
-
-**Steps:**
-- Enter a title
-- Enter a body
-- Press "Create Post" button
-
-**Expected Result:**
-- New post appears in the list
-- Input fields are cleared
-- UI updates automatically via query invalidation
-
----
-
-## Test Case 3 — Update Post (PUT)
-**Description:** Fully update an existing post.
-
-**Steps:**
-- Click "Edit" on a post
-
-**Expected Result:**
-- Post title and body are updated
-- List refreshes automatically
-
----
-
-# ⚠️ Edge Case Test Cases
-
-## Edge Case 1 — Empty Input Submission
-**Description:** Prevent invalid post creation.
-
-**Steps:**
-- Leave title and body empty
-- Press "Create Post"
-
-**Expected Result:**
-- No API request is sent
-- App does not crash
-- No empty post is created
-
----
-
-## Edge Case 2 — Invalid User ID Filter
-**Description:** Test filtering with a non-existing user.
-
-**Steps:**
-- Enter `9999` in User ID filter
-
-**Expected Result:**
-- Empty array is returned (`[]`)
-- FlatList shows no data
-- App remains stable
-
----
-
-## Edge Case 3 — Delete Already Removed Post
-**Description:** Ensure app does not crash on repeated deletion.
-
-**Steps:**
-- Click "Delete" on a post twice
-
-**Expected Result:**
-- First click removes post
-- Second click has no effect
-- No crash occurs
-
----
-
-# 🧪 Testing Method
-
-Testing was performed manually using:
-- Console logs
-- Expo Go application
-- Browser/terminal output
-
-Example debug logs used:
-
-```javascript id="dbg1"
-console.log('User ID:', userId);
-console.log('FILTER URL:', url);
-
-
+When you're ready, run:
 
 ```bash
-git clone https://github.com/your-username/crud-query-app.git
-cd crud-query-app
+npm run reset-project
+```
+
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+## Learn more
+
+To learn more about developing your project with Expo, look at the following resources:
+
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+
+## Join the community
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
